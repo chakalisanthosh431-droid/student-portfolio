@@ -1179,6 +1179,55 @@
 `;
 
                 console.log(result);
+                document.querySelector(".hero h1 span").textContent = portfolioData.name;
+
+document.querySelector(".about-text strong").textContent = portfolioData.name;
+
+document.querySelector(".info-box .info-item span:last-child").textContent =
+    portfolioData.name;
+
+document.querySelector(".timeline").innerHTML = `
+    <div class="timeline-card">
+        <h3>Education</h3>
+        <h4>B.Tech / Student</h4>
+        <p>${portfolioData.education}</p>
+    </div>
+`;
+
+document.querySelector(".skills-grid").innerHTML = `
+    <div class="skill">
+        <div class="skill-icon">💻</div>
+        <h3>My Skills</h3>
+        <p>${portfolioData.skills}</p>
+    </div>
+`;
+
+document.querySelector(".project-grid").innerHTML = `
+    <div class="project">
+        <div class="project-top">💼</div>
+        <div class="project-content">
+            <h3>My Project</h3>
+            <p>${portfolioData.projects}</p>
+        </div>
+    </div>
+`;
+
+document.querySelector("#contact .contact-box").innerHTML = `
+    <div class="contact-item">
+        <strong>Name</strong>
+        <span>${portfolioData.name}</span>
+    </div>
+    <div class="contact-item">
+        <strong>Email</strong>
+        <span>${portfolioData.email}</span>
+    </div>
+    <div class="contact-item">
+        <strong>Phone</strong>
+        <span>${portfolioData.phone}</span>
+    </div>
+`;
+
+document.getElementById("name").closest("div").style.display = "none";
 
             } catch (error) {
 
