@@ -1162,21 +1162,6 @@
                 const result = await response.json();
 
                 alert(result.message);
-                document.body.innerHTML = `
-<div style="max-width:800px;margin:40px auto;padding:30px;font-family:Arial;">
-    <h1>My Portfolio</h1>
-    <hr>
-    <h2>${portfolioData.name}</h2>
-    <p><b>Email:</b> ${portfolioData.email}</p>
-    <p><b>Phone:</b> ${portfolioData.phone}</p>
-    <h3>Skills</h3>
-    <p>${portfolioData.skills}</p>
-    <h3>Education</h3>
-    <p>${portfolioData.education}</p>
-    <h3>Projects</h3>
-    <p>${portfolioData.projects}</p>
-</div>
-`;
 
                 console.log(result);
                 document.querySelector(".hero h1 span").textContent = portfolioData.name;
